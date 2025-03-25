@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Data Dashboard</title>
-    <!-- Load React -->
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-    
-    <!-- Load Recharts -->
-    <script src="https://unpkg.com/recharts@2.7.1/umd/Recharts.js" crossorigin></script>
-    
-    <!-- Load PapaParse -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js" crossorigin></script>
-    
-    <!-- Load Babel -->
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    
-    <!-- Load Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Financial Data Dashboard</title>
+
+  <!-- React and ReactDOM -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+
+  <!-- Recharts -->
+  <script src="https://unpkg.com/recharts@2.7.1/umd/Recharts.js" crossorigin></script>
+
+  <!-- PapaParse -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js" crossorigin></script>
+
+  <!-- Babel for in-browser JSX compilation -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <!-- Tailwind CSS (optional) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
 </head>
 <body class="bg-gray-100">
-    <div id="root"></div>
-    
-    <!-- Add the CSV data here -->
-    <script>
+  <div id="root"></div>
+
+  <!-- Provide your actual CSV data as a string here -->
+  <script>
         // This will be your CSV data as a string
         window.csvData = `Financial Year,Carbon Credit,Greenhouse Gas,Climate Active,Consulting Fees,NGER Consulting,Net Zero,Emissions Management,Mandatory Climate,Other Creditors,LCA completion,Carbon Strategy,Training and Education,Climate Fresk,ERF Consulting,Motor Vehicles,Airport Carbon,LCA engagement,Rent,NABERS,CFI Consulting,Direct Client,Airport Accreditation,NABERS engagement,Commissions and Referral Fees,Travel and Other Costs Recovered from clients,Software Access,Insurance,IT Hardware,Car lease,Energy Management,Suspense,Bank & Credit Card Fees,Disposal of Assets,Telephone,Airfares,Taxi Fares,Unidentified,Rounding,Miscellaneous Income,Bad Debt,Trade Debtors,Grand Total
         FY 2022,5283083.3,2500695.85,922889.12,678302.6822,416880.9,25175,176208,,,840,32300,2634.34,55073.02,95225,74545.45,27453.34,,39577.6,18001.18,32140,13350,11890.2,10410,8646.09,,10500,4231,2818.76,2781.94,440,880,150.7,,200,,,0,,-99.03,,-28479.25,10418745.19
@@ -1355,18 +1359,7 @@
         McMillan Shakespeare Limited,,19258,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,19258
         Grand Total,11113663.75,7794067.37,2579982.66,1008116.243,591347.3,498846.81,475068,364994.75,248804.8,243413.15,129047.5,105589.34,105273.02,95225,74545.45,56353.34,54148.5,46730.9,34835.8,32140,28634.43,22390.2,18065,12820.64,12050,10500,4231,2818.76,2781.94,1340,880,634.7,456.55,293.59,270.32,78.56,0,-0.01,-99.03,-18885,-55740.75,25695714.58
         `;
-        
-        // Mock fs module for browser
-        window.fs = {
-            readFile: async (_, options) => {
-                if (options && options.encoding === 'utf8') {
-                    return window.csvData;
-                }
-                // Convert string to ArrayBuffer for binary data
-                const encoder = new TextEncoder();
-                return encoder.encode(window.csvData);
-            }
-        };
+
     </script>
     
     <!-- Dashboard React Component -->

@@ -42,7 +42,7 @@ const FinancialDashboard = () => {
         setLoading(true);
         
         // Read the CSV file
-        const fileContent = await window.fs.readFile('Book1.csv', { encoding: 'utf8' });
+        // const fileContent = await window.fs.readFile('Book1.csv', { encoding: 'utf8' });
         
         // Parse the CSV data
         const parsedData = Papa.parse(fileContent, {
@@ -767,7 +767,6 @@ const MetricComparisonView = ({ data, metrics, financialYears, metricColors, get
   );
 };
 
-export default FinancialDashboard;
 // Render the application
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
