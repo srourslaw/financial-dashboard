@@ -1,6 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
-import Papa from 'papaparse';
+// Access React from global variable
+const React = window.React;
+const { useState, useEffect } = React;
+
+// Access Recharts from global variable
+const {
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, 
+  Tooltip, Legend, ResponsiveContainer, Cell
+} = Recharts;
+
+// Access PapaParse from global variable
+const Papa = window.Papa;
 
 // ------ Complete Dashboard with all three visualizations included ------
 
@@ -759,3 +768,7 @@ const MetricComparisonView = ({ data, metrics, financialYears, metricColors, get
 };
 
 export default FinancialDashboard;
+// Render the application
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<FinancialDashboard />);

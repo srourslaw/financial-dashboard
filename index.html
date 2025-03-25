@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Data Dashboard</title>
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- Load React -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    
+    <!-- Load Recharts -->
+    <script src="https://unpkg.com/recharts@2.7.1/umd/Recharts.js" crossorigin></script>
+    
+    <!-- Load PapaParse -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js" crossorigin></script>
+    
+    <!-- Load Babel -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.7.1/Recharts.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/papaparse/5.3.0/papaparse.min.js"></script>
+    
+    <!-- Load Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
@@ -1360,14 +1369,7 @@ Grand Total,11113663.75,7794067.37,2579982.66,1008116.243,591347.3,498846.81,475
         };
     </script>
     
-    <!-- Your React dashboard component -->
+    <!-- Dashboard React Component -->
     <script type="text/babel" src="dashboard.js"></script>
-    
-    <!-- Render the app -->
-    <script type="text/babel">
-        const rootNode = document.getElementById('root');
-        const root = ReactDOM.createRoot(rootNode);
-        root.render(<FinancialDashboard />);
-    </script>
 </body>
 </html>
