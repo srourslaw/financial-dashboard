@@ -1,36 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Financial Data Dashboard</title>
 
-  <!-- Load React and ReactDOM -->
+  <!-- 1) React + ReactDOM -->
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 
-  <!-- Load Recharts -->
+  <!-- 2) Recharts -->
   <script src="https://unpkg.com/recharts@2.7.1/umd/Recharts.js" crossorigin></script>
 
-  <!-- Load PapaParse -->
+  <!-- 3) PapaParse -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js" crossorigin></script>
 
-  <!-- Load Babel for in-browser JSX compilation -->
+  <!-- 4) Babel for JSX -->
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
-  <!-- (Optional) Load Tailwind CSS for styling -->
+  
+  <!-- (Optional) Tailwind CSS or any other styles -->
   <link
     href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
     rel="stylesheet"
   />
 </head>
-
-<body class="bg-gray-100">
-  <!-- The root element for your React app -->
+<body>
   <div id="root"></div>
-
-  <!-- Provide your CSV data here as a single string -->
-  <!-- Replace the sample with your entire CSV -->
   <script>
     window.csvData = `
 Financial Year,Carbon Credit,Greenhouse Gas,Climate Active,Consulting Fees,NGER Consulting,Net Zero,Emissions Management,Mandatory Climate,Other Creditors,LCA completion,Carbon Strategy,Training and Education,Climate Fresk,ERF Consulting,Motor Vehicles,Airport Carbon,LCA engagement,Rent,NABERS,CFI Consulting,Direct Client,Airport Accreditation,NABERS engagement,Commissions and Referral Fees,Travel and Other Costs Recovered from clients,Software Access,Insurance,IT Hardware,Car lease,Energy Management,Suspense,Bank & Credit Card Fees,Disposal of Assets,Telephone,Airfares,Taxi Fares,Unidentified,Rounding,Miscellaneous Income,Bad Debt,Trade Debtors,Grand Total
